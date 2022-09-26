@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorAtividades.Views.AboutPage"
+             Title="Sobre a aplicação">
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">blue</Color>
+        <Color x:Key="LightTextColor">black</Color>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                     Padding="30,10,30,24"
+                     Spacing="10">
+
+            <Label Text="Missão"
+                   FontSize="Title" />
+            <Label Text="Esta aplicação foi realizada em Xamarin.forms para a UFCD 5423 - Soluções para o Desenvolvimento de Apps Móveis."
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Queriamos que a mesma tivesse as seguintes especificações:"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Deve ter pelo menos 4 páginas;"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Deve ter estilos globais implícitos e explícitos;"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Deve ter pelo menos três layouts;"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Deve ter pelo menos quatro views;"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Deve ter imagens;"
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+            <Label Text="Prazo de entrega: 28/09."
+                   FontSize="13"
+                   Padding="0,0,0,0" />
+
+            <Label Text="Objetivo"
+                   FontSize="Title"
+                   Padding="0,10,0,0" />
+
+            <Label Text="A aplicação permite ao utilizador adicionar atividades e estabelecer deadlines para as mesmas,assim que esses deadlines esgotarem e não tiverem sido concluídas, o utilizador receberá uma notificação."
+                   FontSize="13" />
+
+            <Image Aspect="AspectFill"
+                   Source="xamarinstore.jpg"
+                   Opacity="0.6" />
+
+        </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

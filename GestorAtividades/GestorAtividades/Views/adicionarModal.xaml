@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorAtividades.Views.adicionar"
+             xmlns:behaviors="clr-namespace:GestorAtividades">
+
+
+    <Frame x:Name="frame"
+           BackgroundColor="Transparent"
+           Padding="0"
+           Margin="10,20,10,20">
+        <StackLayout>
+
+            <Grid Margin="0,20,0,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Image="arrow_left"
+                        x:Name="btClose"
+                        Text="Voltar"
+                        FontSize="10"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        ContentLayout="Left"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="100"
+                        VerticalOptions="Start"
+                        BackgroundColor="Transparent"
+                        Clicked="fechar" />
+
+
+
+                <Button Image="plus_icon"
+                        Text="Adicionar"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        x:Name="btAdd"
+                        FontSize="10"
+                        ContentLayout="Left"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="130"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        Clicked="adicionarTarefa" />
+
+
+            </Grid>
+
+
+
+            <Label Text="Adicionar tarefas"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="25"
+                   Margin="0,20,0,0" />
+
+            <Label x:Name="lbType"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="10"
+                   Margin="0,0,0,0" 
+            />
+
+
+
+            <Entry x:Name="etNome"
+                   Margin="10,5,10,0"
+                   Keyboard="Text"
+                   Placeholder="Nome da atividade"
+                   PlaceholderColor="Black"
+                   ReturnType="Next"
+                   ClearButtonVisibility="WhileEditing"
+                   TextColor="Black">
+
+                <Entry.Behaviors>
+                    <behaviors:EntryLengthValidatorBehavior MaxLength="15" />
+                </Entry.Behaviors>
+
+
+            </Entry>
+
+            <Grid Margin="10,20,10,0"
+                  HorizontalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+
+
+                <Frame OutlineColor="Black"
+                       BackgroundColor="Transparent"
+                       Padding="0"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Grid.RowSpan="4"
+                       Grid.ColumnSpan="4">
+
+                    <Editor x:Name="etDescricao"
+                            Margin="10,10,10,10"
+                            Keyboard="Text"
+                            Placeholder="Descricao"
+                            PlaceholderColor="Black"
+                            TextColor="Black" />
+
+
+                </Frame>
+
+            </Grid>
+
+
+            
+            <DatePicker x:Name="etDate"
+                        Margin="10,20,10,0"
+                        Format="dd/MM/yyyy"
+                        />
+
+            <TimePicker x:Name="etTime"
+                        Margin="10,20,10,0"
+                        Format="HH:mm" 
+            />
+
+
+            <Label Text="Ativar notificação de alarme?"
+                   FontSize="15"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"
+                   />
+
+            <Switch Margin="0,0,0,0"
+                    HorizontalOptions="Center"
+                    x:Name="btAlarme"
+                    OnColor="Green"
+                    ThumbColor="Black" />
+
+
+
+        </StackLayout>
+    </Frame>
+
+
+</ContentPage>

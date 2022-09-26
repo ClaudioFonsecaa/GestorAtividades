@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="GestorAtividades.Controls.FlyoutFooter">
+    
+    <StackLayout>
+        <Label Text="Cláudio Correia"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        
+        <!--<Label Text="{Binding Source={x:Static sys:DateTime.Now.toShortString()}, StringFormat='{dd, yyyy}'}"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+        
+         string teste = "{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{dd/MM/yyyy}'}";
+        -->
+        
+       
+
+        <Label Text="Gestor de Atividades - 2022"
+               TextColor="Gray"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentView>

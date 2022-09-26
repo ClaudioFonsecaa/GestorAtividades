@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorAtividades.Views.verModal"
+             Title="Tarefa">
+
+    <Frame x:Name="borda"
+           HeightRequest="36"
+           BackgroundColor="Transparent"
+           Padding="0"
+           Margin="10,20,10,20">
+
+        <StackLayout>
+
+          
+            <Label x:Name="estado"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"
+                   Margin="0,20,0,0" />
+
+
+            <CollectionView x:Name="dataCollectionView"
+                            Margin="0,15,0,0"
+                            EmptyView="Não existem dados disponíveis!">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout>
+
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Button Image="arrow_left"
+                                        x:Name="btClose"
+                                        Text="Voltar"
+                                        FontSize="10"
+                                        ContentLayout="Left"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        WidthRequest="100"
+                                        Margin="20,0,0,0"
+                                        BackgroundColor="Transparent"
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Clicked="btClose_Clicked" />
+
+
+                                <Label Text="Data Início:"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       Grid.Column="1"
+                                       Grid.Row="0" 
+                                       />
+
+
+                                <Label Text="{Binding DataInicio}"
+                                       Grid.Column="2"
+                                       Grid.Row="0"
+                                       TextColor="Black" />
+
+
+                            </Grid>
+                            
+                            
+                            
+
+
+                            <Grid Margin="20,0,20,0"
+                                  HorizontalOptions="CenterAndExpand">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="OFF"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       FontSize="10"
+                                       TextColor="Red"
+                                       HorizontalTextAlignment="Center"
+                                       Margin="0,20,0,0" />
+
+                                <Label Text="Alarme"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                       FontSize="15"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="Center"
+                                       Margin="0,20,0,0" />
+
+                                <Label Text="ON"
+                                       Grid.Row="0"
+                                       Grid.Column="2"
+                                       FontSize="10"
+                                       TextColor="Green"
+                                       HorizontalTextAlignment="Center"
+                                       Margin="0,20,0,0" />
+
+
+                            </Grid>
+
+
+                            <Switch Margin="0,0,0,0"
+                                    HorizontalOptions="Center"
+                                    x:Name="btAlarme"
+                                    IsToggled="{Binding Alarme}"
+                                    IsEnabled="False"
+                                    OnColor="Green"
+                                    ThumbColor="Gray">
+
+                            </Switch>
+
+
+                            <Label Text="{Binding Name}"
+                                   x:Name="lbName"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="25"
+                                   Margin="0,20,0,0"
+                                   TextColor="Black" />
+
+
+                            <Grid Margin="20,20,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="130" />
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Data Fim:"
+                                       Grid.Column="0"
+                                       Grid.Row="0"
+                                       FontAttributes="Bold"
+                                       TextColor="Black" />
+
+
+                                <Label Text="{Binding DataFim}"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       TextColor="Black" />
+
+                                <Label Text="Hora:"
+                                       Grid.Column="2"
+                                       Grid.Row="0"
+                                       Margin="0,0,0,0"
+                                       FontAttributes="Bold"
+                                       TextColor="Black" />
+
+                                <Label Text="{Binding Tempo}"
+                                       Margin="0,0,0,0"
+                                       Grid.Column="3"
+                                       Grid.Row="0"
+                                       TextColor="Black" />
+
+
+                            </Grid>
+
+
+                            <Label Text="Descrição:"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                   Margin="0,20,0,0"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="Black" />
+
+                            <Grid Margin="20,0,20,0"
+                                  HorizontalOptions="CenterAndExpand">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Frame OutlineColor="Black"
+                                       BackgroundColor="Transparent"
+                                       Padding="0"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       Grid.RowSpan="4"
+                                       Grid.ColumnSpan="4">
+
+                                    <Label Text="{Binding Description}"
+                                           Margin="10,10,20,10"
+                                           TextColor="Black"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           Grid.RowSpan="4"
+                                           Grid.ColumnSpan="4" />
+                                </Frame>
+
+
+
+                            </Grid>
+
+
+                            <Grid Margin="0,0,0,0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Button Image="edit"
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Text="Editar"
+                                        x:Name="btEdit"
+                                        FontSize="10"
+                                        Margin="0,0,0,0"
+                                        ContentLayout="Left"
+                                        HorizontalOptions="CenterAndExpand"
+                                        WidthRequest="100"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        Clicked="btEdit_Clicked"
+                                        CommandParameter="{Binding .}" />
+
+                                <Button Image="delete"
+                                        Text="Apagar"
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        x:Name="btDelete"
+                                        FontSize="10"
+                                        ContentLayout="Left"
+                                        HorizontalOptions="Center"
+                                        WidthRequest="100"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        CommandParameter="{Binding .}"
+                                        Clicked="btDelete_Clicked" />
+
+
+                            </Grid>
+
+
+
+
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+
+    </Frame>
+
+</ContentPage>
