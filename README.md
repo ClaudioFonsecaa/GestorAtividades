@@ -20,8 +20,8 @@ esgotarem e não tiverem sido concluídas, o utilizador receberá uma notificaç
 <img src="pic9.PNG">
 <img src="pic10.PNG">
 <img src="pic11.PNG">
-<img src="pic12.png">
-<img src="pic13.png">
+<img src="pic12.png" width="200" height="200">
+<img src="pic13.png" width="200" height="200">
 
 
 Cláudio Correia - 2022
