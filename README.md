@@ -7,6 +7,6 @@ A aplicação permite ao utilizador adicionar atividades (3 tipos - DONE, TO DO 
 e estabelecer deadlines para as mesmas,assim que esses deadlines
 esgotarem e não tiverem sido concluídas, o utilizador receberá uma notificação.
 
-<img src="GestorAtividades/pic1.PNG">
+<img src="pic1.PNG">
 
-<img src="GestorAtividades/pic2.PNG">
+<img src="pic2.PNG">
