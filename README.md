@@ -18,5 +18,5 @@ esgotarem e não tiverem sido concluídas, o utilizador receberá uma notificaç
 <img src="pic9.PNG">
 <img src="pic10.PNG">
 <img src="pic11.PNG">
-<img src="pic12.PNG">
-<img src="pic13.PNG">
+<img src="pic12.png">
+<img src="pic13.png">
