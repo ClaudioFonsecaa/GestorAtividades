@@ -8,3 +8,5 @@ e estabelecer deadlines para as mesmas,assim que esses deadlines
 esgotarem e não tiverem sido concluídas, o utilizador receberá uma notificação.
 
 <img src="GestorAtividades/pic1.PNG">
+
+<img src="GestorAtividades/pic2.PNG">
